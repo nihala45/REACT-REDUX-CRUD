@@ -2,7 +2,8 @@ import React from 'react';
 import './Home.css'
 import { useNavigate } from 'react-router-dom';
 import ColorSchemesExample from '../../components/Navbar/Navbar';
-import { ACCESS_TOKEN,REFRESH_TOKEN } from '../../constants/token';
+import { logout } from '../../redux/actions/authActions';
+import { useDispatch } from 'react-redux';
 
 
 
@@ -10,10 +11,11 @@ const Home = () => {
 
   
   const navigate = useNavigate()
-
+  const dispatch = useDispatch();
   const handleLogout = () => {
-    navigate('/login')
-
+    dispatch(logout()); 
+    navigate('/login');
+    
   }
  
   

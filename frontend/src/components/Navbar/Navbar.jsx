@@ -26,7 +26,7 @@ function ColorSchemesExample() {
               </Link>
             </li>
             <li>
-              <Link to="/userprofile" className='userLink'>
+              <Link to="/profile" className='userLink'>
                 My Profile
               </Link>
             </li>
