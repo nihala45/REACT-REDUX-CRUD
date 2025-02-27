@@ -7,9 +7,7 @@ import { ACCESS_TOKEN,REFRESH_TOKEN } from '../../constants/token';
 
 
 const Home = () => {
-  console.log("Access Token:", localStorage.getItem(ACCESS_TOKEN));
-console.log("Refresh Token:", localStorage.getItem(REFRESH_TOKEN));
-console.log("Admin:", localStorage.getItem("admin"));
+
   
   const navigate = useNavigate()
 

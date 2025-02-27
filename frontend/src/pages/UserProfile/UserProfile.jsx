@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './UserProfile.css'
 import api from '../../api';
 import { useNavigate } from 'react-router-dom';
-import ColorSchemesExample from '../../components/Navbar/Navbar';
+import ColorSchemesExample from '../../components/Navbar/Navbar'
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '../../constants/token';
 
 const UserProfile = () => {
     const [profileData, setProfileData] = useState({
@@ -17,8 +18,7 @@ const UserProfile = () => {
     const navigate = useNavigate()
 
     const fetchProfile = async () => {
-      const token = localStorage.getItem('access');
-      console.log(token)
+      const token = localStorage.getItem(ACCESS_TOKEN);
       if (!token) {
           return navigate('/login');
       }
