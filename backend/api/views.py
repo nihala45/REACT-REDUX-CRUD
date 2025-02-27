@@ -30,3 +30,12 @@ class LoginView(APIView):
                   'is_superuser': user.is_superuser
             })
         return Response({'error' : "Invalid Credentials"}, status=400)
+    
+    
+class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    def get_object(self):
+        print(self.request.user)
+        return self.request.user

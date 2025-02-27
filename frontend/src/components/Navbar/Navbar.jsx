@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
 import { useSelector } from 'react-redux';
 import './Navbar.css'
 
@@ -27,7 +26,7 @@ function ColorSchemesExample() {
               </Link>
             </li>
             <li>
-              <Link to="/profile" className='userLink'>
+              <Link to="/userprofile" className='userLink'>
                 My Profile
               </Link>
             </li>
